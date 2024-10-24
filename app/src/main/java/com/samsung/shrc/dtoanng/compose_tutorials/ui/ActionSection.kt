@@ -79,6 +79,7 @@ fun ActionItem(
             modifier = Modifier
                 .size(50.dp)
                 .clip(CircleShape)
+                .background(Color.White)
                 .background(color = color),
             contentAlignment = Alignment.Center
         ) {

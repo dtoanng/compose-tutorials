@@ -16,13 +16,13 @@ import com.samsung.shrc.dtoanng.compose_tutorials.R
 @Composable
 fun SubTitle(modifier: Modifier = Modifier, subtitle: String) {
     Text(
-        modifier = Modifier.padding(vertical = 20.dp),
+        modifier = Modifier.padding(vertical = 15.dp),
         text = subtitle,
         style = TextStyle(
-            fontFamily = Font(R.font.sf_ui_display_semibold).toFontFamily(),
-            fontSize = 25.sp,
+            fontFamily = Font(R.font.sf_ui_display_bold).toFontFamily(),
+            fontSize = 18.sp,
             color = Color.Gray.copy(alpha = 0.9f)
         ),
-        fontWeight = FontWeight.Medium
+        fontWeight = FontWeight.Black
     )
 }

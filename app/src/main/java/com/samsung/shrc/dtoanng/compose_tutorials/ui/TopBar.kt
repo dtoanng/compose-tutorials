@@ -47,14 +47,13 @@ fun TopBar(
                         .align(Alignment.CenterStart)
                 )
 
-                Text(
-                    text = "Wallet",
-                    fontSize = 35.sp,
-                    fontFamily = Font(R.font.sf_ui_display_semibold).toFontFamily(),
-                    color = MaterialTheme.colorScheme.onBackground,
+                Image(
                     modifier = Modifier
-                        .padding(start = 20.dp)
-                        .align(Alignment.CenterStart),
+                        .size(60.dp)
+                        .align(Alignment.CenterStart)
+                        .padding(start = 20.dp),
+                    painter = painterResource(id = R.drawable.google_wallet_light),
+                    contentDescription = null,
                 )
 
                 Image(

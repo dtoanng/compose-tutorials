@@ -24,6 +24,7 @@ import androidx.compose.ui.input.nestedscroll.nestedScroll
 import androidx.compose.ui.unit.dp
 import com.samsung.shrc.dtoanng.compose_tutorials.ui.ActionSection
 import com.samsung.shrc.dtoanng.compose_tutorials.ui.CardSection
+import com.samsung.shrc.dtoanng.compose_tutorials.ui.ChartSection
 import com.samsung.shrc.dtoanng.compose_tutorials.ui.SpendingSection
 import com.samsung.shrc.dtoanng.compose_tutorials.ui.TopBar
 import com.samsung.shrc.dtoanng.compose_tutorials.ui.theme.ComposeTutorialsTheme
@@ -73,6 +74,12 @@ class MainActivity : ComponentActivity() {
             Spacer(modifier = Modifier.height(20.dp))
 
             SpendingSection(modifier = Modifier.fillMaxWidth())
+
+            Spacer(modifier = Modifier.height(20.dp))
+
+            ChartSection()
+
+            Spacer(modifier = Modifier.height(100.dp))
         }
     }
 }
@@ -85,5 +92,5 @@ fun randomColor(minBrightness: Int = 40): Color {
     val green = random.nextInt(minBrightness, maxBrightness)
     val blue = random.nextInt(minBrightness, maxBrightness)
 
-    return Color(red, green, blue).copy(alpha = 0.2f)
+    return Color(red, green, blue).copy(alpha = 0.25f)
 }

@@ -35,9 +35,11 @@ import com.samsung.shrc.dtoanng.compose_tutorials.randomColor
 @Composable
 fun SpendingSection(modifier: Modifier = Modifier) {
 
-    Column(modifier = Modifier
-        .fillMaxWidth()
-        .padding(start = 22.dp)) {
+    Column(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(start = 22.dp)
+    ) {
         SubTitle(subtitle = "Spending Breakdown")
         LazyRow(modifier = Modifier.fillMaxWidth(), userScrollEnabled = true) {
             items(spendingList) { item ->
@@ -60,13 +62,10 @@ fun SpendingItemSection(modifier: Modifier = Modifier, spendingItem: SpendingIte
             modifier = modifier
                 .fillMaxSize()
                 .background(Color.White)
-                .background(
-                    color = spendingItem.color,
-                )
+                .background(color = spendingItem.color)
                 .padding(15.dp),
-            verticalArrangement = Arrangement.SpaceBetween,
-
-            ) {
+            verticalArrangement = Arrangement.SpaceBetween
+        ) {
 
             Icon(
                 modifier = Modifier
@@ -82,7 +81,7 @@ fun SpendingItemSection(modifier: Modifier = Modifier, spendingItem: SpendingIte
                 text = spendingItem.name,
                 style = TextStyle(
                     fontFamily = Font(R.font.sf_ui_display_semibold).toFontFamily(),
-                    fontSize = 10.sp,
+                    fontSize = 12.sp,
                     color = Color.Black.copy(alpha = 0.5f)
                 )
             )
