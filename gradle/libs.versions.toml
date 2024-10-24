@@ -42,6 +42,7 @@ coil = "2.6.0"
 extendedIcon = "1.7.4"
 ksp = "1.9.24-1.0.20" # https://github.com/google/ksp/releases
 timber = "5.0.1"
+composeCharts = "0.2.1"
 
 #test
 junit = "4.13.2"
@@ -132,7 +133,7 @@ room-compiler = { group = "androidx.room", name = "room-compiler", version.ref =
 room-paging = { group = "androidx.room", name = "room-paging", version.ref = "room" }
 
 #system ui controller
-accompanist-systemuicontroller = { group = "com.google.accompanist", name = "accompanist-systemuicontroller", version.ref = "systemuicontroller"}
+accompanist-systemuicontroller = { group = "com.google.accompanist", name = "accompanist-systemuicontroller", version.ref = "systemuicontroller" }
 
 #others
 ksp-gradlePlugin = { group = "com.google.devtools.ksp", name = "com.google.devtools.ksp.gradle.plugin", version.ref = "ksp" }
@@ -141,6 +142,7 @@ gson = { group = "com.google.code.gson", name = "gson", version.ref = "gson" }
 coil = { group = "io.coil-kt", name = "coil-compose", version.ref = "coil" }
 extendedIcon = { group = "androidx.compose.material", name = "material-icons-extended", version.ref = "extendedIcon" }
 timber = { group = "com.jakewharton.timber", name = "timber", version.ref = "timber" }
+compose-chart = { module = "io.github.bytebeats:compose-charts", version.ref = "composeCharts" }
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }

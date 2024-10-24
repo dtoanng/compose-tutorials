@@ -138,4 +138,5 @@ dependencies {
     implementation(libs.coil)
     implementation(libs.extendedIcon)
     implementation(libs.timber)
+    implementation(libs.compose.chart)
 }
