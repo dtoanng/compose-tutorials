@@ -34,6 +34,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.samsung.shrc.dtoanng.compose_tutorials.R
+import com.samsung.shrc.dtoanng.compose_tutorials.randomColor
 
 @Composable
 fun ActionSection(modifier: Modifier = Modifier) {
@@ -48,19 +49,19 @@ fun ActionSection(modifier: Modifier = Modifier) {
         ActionItem(
             icon = painterResource(id = R.drawable.money_send),
             name = "Send",
-            color = Color.Cyan
+            color = randomColor()
         )
 
         ActionItem(
             icon = painterResource(id = R.drawable.money_receive),
             name = "Receive",
-            color = Color.Green
+            color = randomColor()
         )
 
         ActionItem(
             icon = painterResource(id = R.drawable.see_more),
             name = "More",
-            color = Color.Gray
+            color = randomColor()
         )
 
     }
@@ -78,13 +79,13 @@ fun ActionItem(
             modifier = Modifier
                 .size(50.dp)
                 .clip(CircleShape)
-                .background(color = color.copy(alpha = 0.2f)),
+                .background(color = color),
             contentAlignment = Alignment.Center
         ) {
             Icon(
                 painter = icon,
                 contentDescription = null,
-                tint = Color.Black.copy(alpha = 0.6f),
+                tint = Color.Black.copy(alpha = 0.7f),
                 modifier = Modifier.size(20.dp)
             )
         }
@@ -94,9 +95,9 @@ fun ActionItem(
         Text(
             text = name,
             style = TextStyle(
-                fontFamily = Font(R.font.sf_ui_display_bold).toFontFamily(),
+                fontFamily = Font(R.font.sf_ui_display_semibold).toFontFamily(),
                 fontSize = 15.sp,
-                color = Color.Black.copy(alpha = 0.7f)
+                color = Color.Gray.copy(alpha = 0.9f)
             )
         )
     }
