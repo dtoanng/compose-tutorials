@@ -40,6 +40,7 @@ json = "20190722"
 gson = "2.10.1"
 coil = "2.6.0"
 extendedIcon = "1.7.4"
+haze = "0.9.0-rc01"
 ksp = "1.9.24-1.0.20" # https://github.com/google/ksp/releases
 timber = "5.0.1"
 
@@ -140,6 +141,7 @@ json = { group = "org.json", name = "json", version.ref = "json" }
 gson = { group = "com.google.code.gson", name = "gson", version.ref = "gson" }
 coil = { group = "io.coil-kt", name = "coil-compose", version.ref = "coil" }
 extendedIcon = { group = "androidx.compose.material", name = "material-icons-extended", version.ref = "extendedIcon" }
+haze = { module = "dev.chrisbanes.haze:haze", version.ref = "haze" }
 timber = { group = "com.jakewharton.timber", name = "timber", version.ref = "timber" }
 
 [plugins]

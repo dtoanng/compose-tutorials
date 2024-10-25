@@ -137,5 +137,6 @@ dependencies {
     implementation(libs.json)
     implementation(libs.coil)
     implementation(libs.extendedIcon)
+    implementation(libs.haze)
     implementation(libs.timber)
 }
