@@ -7,22 +7,24 @@ import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.material3.rememberTopAppBarState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.input.nestedscroll.nestedScroll
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.samsung.shrc.dtoanng.compose_tutorials.ui.BottomBar
 import com.samsung.shrc.dtoanng.compose_tutorials.ui.CarList
 import com.samsung.shrc.dtoanng.compose_tutorials.ui.Pager
 import com.samsung.shrc.dtoanng.compose_tutorials.ui.TopBar
@@ -30,7 +32,6 @@ import com.samsung.shrc.dtoanng.compose_tutorials.ui.theme.Blur
 import com.samsung.shrc.dtoanng.compose_tutorials.ui.theme.ComposeTutorialsTheme
 import dev.chrisbanes.haze.HazeState
 import dev.chrisbanes.haze.HazeStyle
-import dev.chrisbanes.haze.HazeTint
 import dev.chrisbanes.haze.haze
 import dev.chrisbanes.haze.hazeChild
 
@@ -69,8 +70,9 @@ class MainActivity : ComponentActivity() {
                     },
                 ) { innerPadding ->
                     HomeScreen(
-                        modifier = Modifier.padding(innerPadding),
-                        hazeState = hazeState
+                        modifier = Modifier.fillMaxSize(),
+                        hazeState = hazeState,
+                        paddingValues = innerPadding
                     )
                 }
             }
@@ -81,12 +83,25 @@ class MainActivity : ComponentActivity() {
     fun HomeScreen(
         modifier: Modifier = Modifier,
         hazeState: HazeState,
+        paddingValues: PaddingValues
     ) {
         Box(modifier = modifier.background(color = MaterialTheme.colorScheme.background)) {
             CarList(
                 modifier = Modifier
                     .fillMaxSize()
-                    .hazeChild(state = hazeState, style = HazeStyle(blurRadius = 13.dp, tint = HazeTint(Blur)))
+                    .haze(state = hazeState, style = HazeStyle(blurRadius = 13.dp, tint = Blur)),
+                paddingValue = paddingValues
+            )
+
+            BottomBar(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(horizontal = 15.dp, vertical = 20.dp)
+                    .align(Alignment.BottomStart)
+                    .hazeChild(
+                        state = hazeState,
+                        shape = RoundedCornerShape(20.dp)
+                    )
             )
         }
     }
