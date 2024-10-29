@@ -4,13 +4,14 @@ kotlin = "1.9.24" # https://developer.android.com/jetpack/androidx/releases/comp
 coroutines = "1.8.0"
 
 #androidx
-agp = "8.3.2"
+agp = "8.5.2"
 coreKtx = "1.13.1"
 activityCompose = "1.9.3"
 composeBom = "2024.10.00"
 
 #compose navigation
 composeNavigation = "2.8.3"
+kotlinxSerializationJson = "1.6.3"
 
 #jetpack
 androidxLifecycle = "2.8.6"
@@ -78,6 +79,7 @@ androidx-material3 = { group = "androidx.compose.material3", name = "material3" 
 
 #compose navigation
 androidx-navigation-compose = { group = "androidx.navigation", name = "navigation-compose", version.ref = "composeNavigation" }
+kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinxSerializationJson" }
 
 #test
 junit = { module = "junit:junit", version.ref = "junit" }
@@ -145,6 +147,7 @@ timber = { group = "com.jakewharton.timber", name = "timber", version.ref = "tim
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }
 jetbrainsKotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+jetbrainsKotlinSerialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
 
 #hilt

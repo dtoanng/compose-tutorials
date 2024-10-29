@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
+    alias(libs.plugins.jetbrainsKotlinSerialization)
     alias(libs.plugins.hilt)
     alias(libs.plugins.ksp)
 }
@@ -67,6 +68,7 @@ dependencies {
 
     //compose navigation
     implementation(libs.androidx.navigation.compose)
+    implementation(libs.kotlinx.serialization.json)
 
     //lifecycle
     implementation(libs.androidx.lifecycle.runtime.ktx)
@@ -77,12 +79,12 @@ dependencies {
     implementation(libs.androidx.lifecycle.viewmodel.savedstate)
 
     //jetpack
-    implementation(libs.androidx.livedata.ktx)
-    implementation(libs.androidx.navigation.fragment.ktx)
-    implementation(libs.androidx.navigation.ui.ktx)
-    implementation(libs.androidx.paging.runtime)
-    implementation(libs.androidx.preference)
-    implementation(libs.androidx.datastore)
+//    implementation(libs.androidx.livedata.ktx)
+//    implementation(libs.androidx.navigation.fragment.ktx)
+//    implementation(libs.androidx.navigation.ui.ktx)
+//    implementation(libs.androidx.paging.runtime)
+//    implementation(libs.androidx.preference)
+//    implementation(libs.androidx.datastore)
 
     //hilt
     implementation(libs.dagger.hilt)
